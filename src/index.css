@@ -1,0 +1,145 @@
+:root {
+    --term-green: #00ff41;
+    --term-bg: #0d0d0d;
+    --term-glow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+body {
+    background-color: var(--term-bg);
+    color: var(--term-green);
+    font-family: "Bitstream Charter";
+    font-size: larger;
+    text-shadow: var(--term-glow);
+}
+
+#root > div {
+    display: flex;
+    min-height: 100vh;
+}
+div[style*="flex: 1"] {
+    padding: 20px;
+    border: 1px solid var(--term-green);
+    box-shadow: inset var(--term-glow);
+}
+h2, h3 {
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--term-green);
+    padding-bottom: 15px;
+    letter-spacing: 3px;
+
+}
+input, select, textarea {
+    background: transparent;
+    border: 2px solid var(--term-green);
+    color: var(--term-green);
+    font-family: inherit;
+    font-size: 16px;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+input:focus {
+    background: rgba(0, 255, 65, 0.1);
+}
+button {
+    background: var(--term-green);
+    color: var(--term-bg);
+    border: none;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-right: 5px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: transparent;
+    color: var(--term-green);
+    outline: 1px solid var(--term-green);
+    box-shadow: var(--term-glow);
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px dashed var(--term-green);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    background: rgba(0, 255, 65, 0.05);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--term-green);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    vertical-align: middle;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:hover {
+    background: rgba(0, 255, 65, 0.1);
+    box-shadow: var(--term-glow);
+}
+
+input[type="checkbox"]:checked {
+    background: rgba(0, 255, 65, 0.05);
+    box-shadow: var(--term-glow);
+}
+
+input[type="checkbox"]:checked::before {
+    content: "X";
+    color: var(--term-green)
+    font-family: 'Hack', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: var(--term-glow);
+}
+
+input[type="checkbox"]:checked + span {
+    color: rgba(0, 255, 65, 0.4);
+    text-decoration: line-through;
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid var(--term-green);
+    margin: 20px 0;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: var(--term-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--term-green);
+}
